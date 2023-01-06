@@ -1,0 +1,236 @@
+@import './variables.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: $LightGrayishCyanBG;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 15px;
+}
+
+.bg-header-job-listing {
+    background-image: url('../img/bg-header-desktop.svg');
+    background-color: $DesaturatedDarkCyan;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 180px;
+    position: relative;
+    transition: .2s linear;
+
+    & .bg-filter {
+        max-width: 1440px;
+        padding: 0 6rem;
+        position: absolute;
+        bottom: -30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        & .card {
+            border: none;
+            padding: 1rem 1.5rem;
+            box-shadow: #63baba5e 0px 10px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -25px;
+
+            & .bagde {
+                background-color: $LightGrayishCyanFilter;
+                padding: 1.5px 10px;
+                border-radius: 5px 0 0 5px;
+                cursor: pointer;
+
+                & span {
+                    color: $DesaturatedDarkCyan;
+                    font-weight: 700;
+                    border-radius: 5px 0 0 5px;
+                }
+            }
+
+            & .remove {
+                background-color: $DesaturatedDarkCyan;
+                padding: 1.5px 5px;
+                border-radius: 0 5px 5px 0;
+                color: #FFFFFF;
+                text-align: center;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $VeryDarkGrayishCyan;
+                }
+            }
+
+            & .clear {
+                color: $DesaturatedDarkCyan;
+                font-weight: 500;
+                cursor: pointer;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+
+.bg-content-job-listing {
+    max-width: 1440px;
+    margin: 5rem auto;
+    padding: 0 6rem;
+
+    & .card {
+        margin-bottom: 2rem;
+        border: none;
+        box-shadow: #63baba5e 0px 10px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -25px;
+        padding: 1.5rem 2rem;
+        border-left: 0.37rem solid #FFFFFF;
+        cursor: pointer;
+
+        &:hover {
+            border-left: 0.37rem solid $DesaturatedDarkCyan;
+
+            & h4 {
+                color: $DesaturatedDarkCyan;
+            }
+        }
+
+        & .img-logo {
+            width: 100%;
+            height: 100%;
+            max-width: 100px;
+        }
+
+        & h5 {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: $DesaturatedDarkCyan;
+            margin-bottom: 0rem;
+            line-height: 1.5rem;
+        }
+
+        & .bagde-new,
+        .bagde-featured {
+            color: #FFFFFF;
+            border-radius: 25px;
+            padding: 0 7.5px;
+            margin-bottom: 0rem;
+
+            & span {
+                vertical-align: middle;
+            }
+        }
+
+        & .bagde-new {
+            background-color: $DesaturatedDarkCyan;
+        }
+
+        & .bagde-featured {
+            background-color: $VeryDarkGrayishCyan;
+        }
+
+        & .content-job-listing {
+            margin-top: 0;
+        }
+
+        & h4 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: $VeryDarkGrayishCyan;
+            margin-bottom: 0;
+        }
+
+        & p {
+            font-size: 1.125rem;
+            font-weight: 500;
+            color: $DarkGrayishCyan;
+            margin-bottom: 0;
+        }
+
+        & .bagde {
+            background-color: $LightGrayishCyanFilter;
+            padding: 1.5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+
+            & span {
+                color: $DesaturatedDarkCyan;
+                font-weight: 700;
+            }
+
+            &:hover {
+                background-color: $DesaturatedDarkCyan;
+
+                & span {
+                    color: #FFFFFF;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .m-custom-0 {
+        margin-bottom: 0rem;
+    }
+    
+    .m-custom-2 {
+        margin-bottom: 8rem;
+    }
+    
+    .m-custom-4 {
+        margin-bottom: 9rem;
+    }
+    
+    .bg-header-job-listing {
+        background-image: url('../img/bg-header-mobile.svg');
+        height: 150px;
+
+        & .bg-filter {
+            max-width: 1440px;
+            padding: 0 6rem;
+            position: relative;
+            bottom: -100%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        & .card {
+            max-width: 440px;
+            margin: auto;
+            flex-wrap: wrap;
+        }
+    }
+
+    .bg-content-job-listing {
+        padding: 0 1rem;
+        margin: 6rem 0;
+
+        & .card {
+            padding: 1.125rem 2rem 1.125rem 1.5rem;
+            max-width: 440px;
+            margin: 3.5rem auto;
+
+            & .content-job-listing {
+                margin-top: 1.75rem;
+                margin-bottom: 1rem;
+                padding-bottom: .875rem;
+                border-bottom: 1px solid #70707080;
+            }
+        }
+    }
+
+    .bg-header-job-listing .bg-filter {
+        padding: 0 1rem;
+    }
+
+    .img-logo {
+        position: absolute;
+        width: 60px !important;
+        height: 60px !important;
+        top: -30px;
+        left: 20px;
+    }
+}
